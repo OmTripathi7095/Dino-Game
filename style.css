@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Press Start 2P', cursive;
+    color: #535353;
+}
+body{
+    background-color: #FFFFFF;
+    overflow: hidden;
+}
+.container{
+    height: 50vh;
+    width: 200vw;
+    /* background-color: tomato; */
+    position: absolute;
+    top: 20vh;
+}
+.GameOver{
+    z-index: 99;
+    position: absolute;
+    height: 25vh;
+    width: 35vw;
+    left: 30vw;
+    top: -10vh;
+    background-image: url(/images/gameover_text.png);
+    background-size: cover;
+    background-position: center;
+    mix-blend-mode: difference;
+}
+.score{
+    padding: 30px;
+    font-size: 17px;
+    position: absolute;
+    height: 10vh;
+    width: 25vw;
+    top: -15vh;
+}
+.visibility{
+    visibility: hidden;
+}
+.land{
+    
+    position: relative;
+    display: flex;
+    height: 45%;
+    width: 100%;
+    /* background-color: aquamarine; */
+}
+.landMove{
+    animation: move 4s linear infinite;
+}
+.paused {
+    animation-play-state: paused;
+  }
+.clouds
+{
+    position: relative;
+    top:0;
+    height: 55%;
+    width: 100%;
+    /* background-color: darkslateblue ; */
+}
+.img{
+    position: relative;
+}
+.ground{
+    position: relative;
+    /* animation: move 5s linear infinite; */
+    /* z-index: 9; */
+    height: 20%;
+    width: 100%;
+    display: flex;
+    /* background-color: aqua; */
+}
+.ground2{
+    position: relative;
+    /* animation: move2 5s linear infinite; */
+    /* z-index: 9; */
+    height: 20%;
+    width: 100%;
+    display: flex;
+    /* background-color: aqua; */
+}
+.ground-1{
+    height: 100%;
+    width: 40%;
+    background-image: url(/images/land1.png);
+}
+.ground-2{
+    height: 100%;
+    width: 40%;
+    background-image: url(/images/land2.png);
+}
+.ground-3{
+    height: 100%;
+    width: 40%;
+    background-image: url(/images/land3.png);
+}
+.dino{
+ 
+    position: relative;
+    left: 10%;
+    height: 12%;
+    width: 1.31%;
+    background-image: url(/images/main-character3.png);
+    top: -53%;
+}
+.aniJump{
+    animation: jump 0.45s linear 1;
+}
+.obstacle{
+    
+    left: 50%;
+    top: -106%;
+    z-index: 9;
+    height: 149%;
+    width: 100%;
+    display: flex;
+    gap: 30%;
+    /* background-color: aqua; */
+    position: absolute;
+}
+.ob-1{
+    /* animation: move 8s linear infinite; */
+   
+    height: 100%;
+    width: 1.5%;
+    background-image: url(/images/cactus1.png);
+}
+.ob-2{
+    height: 100%;
+    width: 3.2%;
+    background-image: url(/images/cactus2.png);
+}
+.ob-3{
+    height: 100%;
+    width: 1.5%;
+    background-image: url(/images/cactus1.png);
+}
+.ob-4{
+    height: 100%;
+    width: 3.2%;
+    background-image: url(/images/cactus2.png);
+}
+@keyframes move{
+    0%{
+       left: 0;
+    }    
+    100%{
+        left: -100vw;
+    }  
+}
+@keyframes jump{
+    0%{
+       top: -53%;
+    }  
+    50%{
+        top: -75%;
+    }  
+    100%{
+        top: -53%;
+    }  
+}
